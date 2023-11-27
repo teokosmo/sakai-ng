@@ -17,6 +17,8 @@ export class AppMenuComponent implements OnInit {
             {
                 label: 'Home',
                 items: [
+                    { label: 'PTRM Table', icon: 'pi pi-fw pi-table', routerLink: ['/uikit/table-ptrm'] },
+                    { label: 'PTRM Tree', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/tree-ptrm'] },
                     { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
                 ]
             },
