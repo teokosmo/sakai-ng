@@ -15,10 +15,18 @@ export class AppMenuComponent implements OnInit {
     ngOnInit() {
         this.model = [
             {
+                label: 'PTRM',
+                items: [
+                    { label: 'Reporting Manager', icon: 'pi pi-fw pi-table', routerLink: ['/uikit/ptrm-reporting-manager'] },
+                    { label: 'Limit Monitoring', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/ptrm-limit-monitoring'] },
+                    { label: 'Concetration Monitoring', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/ptrm-concetration-monitoring'] },
+                    { label: 'Analytics', icon: 'pi pi-fw pi-check-square', routerLink: ['/uikit/ptrm-analytics'] },
+                    { label: 'Admin', icon: 'pi pi-fw pi-pencil', routerLink: ['/uikit/ptrm-admin'] },
+                ]
+            },
+            {
                 label: 'Home',
                 items: [
-                    { label: 'PTRM Table', icon: 'pi pi-fw pi-table', routerLink: ['/uikit/table-ptrm'] },
-                    { label: 'PTRM Tree', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/tree-ptrm'] },
                     { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
                 ]
             },

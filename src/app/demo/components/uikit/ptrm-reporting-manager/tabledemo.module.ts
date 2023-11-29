@@ -14,6 +14,11 @@ import { ProgressBarModule } from 'primeng/progressbar';
 import { ToastModule } from 'primeng/toast';
 import { SliderModule } from 'primeng/slider';
 import { RatingModule } from 'primeng/rating';
+import { ToolbarModule } from 'primeng/toolbar';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
 	imports: [
@@ -30,7 +35,12 @@ import { RatingModule } from 'primeng/rating';
 		MultiSelectModule,
 		DropdownModule,
 		ProgressBarModule,
-		ToastModule
+		ToastModule,
+        ToolbarModule,
+        InputTextareaModule,
+        RadioButtonModule,
+        InputNumberModule,
+        DialogModule
 	],
 	declarations: [TableDemoComponent]
 })
