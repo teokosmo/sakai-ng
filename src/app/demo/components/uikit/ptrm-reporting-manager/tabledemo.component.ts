@@ -4,7 +4,7 @@ import { CustomerService } from 'src/app/demo/service/customer.service';
 import { Product } from 'src/app/demo/api/product';
 import { ProductService } from 'src/app/demo/service/product.service';
 import { Table } from 'primeng/table';
-import { MessageService, ConfirmationService } from 'primeng/api';
+import { MessageService, ConfirmationService, SelectItem } from 'primeng/api';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
 import { Subscription } from 'rxjs';
 
@@ -33,6 +33,7 @@ export class TableDemoComponent implements OnInit {
     statuses: any[] = [];
 
     products: Product[] = [];
+    productsList: Product[] = [];
 
     rowGroupMetadata: any;
 
@@ -45,6 +46,18 @@ export class TableDemoComponent implements OnInit {
     idFrozen: boolean = false;
 
     loading: boolean = true;
+
+    sortOptions: SelectItem[] = [];
+
+    sortOrder: number = 0;
+
+    sortField: string = '';
+
+    sourceCities: any[] = [];
+
+    targetCities: any[] = [];
+
+    orderCities: any[] = [];
 
     @ViewChild('filter') filter!: ElementRef;
 
@@ -88,6 +101,33 @@ export class TableDemoComponent implements OnInit {
             { label: 'Negotiation', value: 'negotiation' },
             { label: 'Renewal', value: 'renewal' },
             { label: 'Proposal', value: 'proposal' }
+        ];
+
+        this.productService.getProducts().then(data => this.productsList = data);
+
+        this.sourceCities = [
+            { name: 'San Francisco', code: 'SF' },
+            { name: 'London', code: 'LDN' },
+            { name: 'Paris', code: 'PRS' },
+            { name: 'Istanbul', code: 'IST' },
+            { name: 'Berlin', code: 'BRL' },
+            { name: 'Barcelona', code: 'BRC' },
+            { name: 'Rome', code: 'RM' }];
+
+        this.targetCities = [];
+
+        this.orderCities = [
+            { name: 'San Francisco', code: 'SF' },
+            { name: 'London', code: 'LDN' },
+            { name: 'Paris', code: 'PRS' },
+            { name: 'Istanbul', code: 'IST' },
+            { name: 'Berlin', code: 'BRL' },
+            { name: 'Barcelona', code: 'BRC' },
+            { name: 'Rome', code: 'RM' }];
+
+        this.sortOptions = [
+            { label: 'Price High to Low', value: '!price' },
+            { label: 'Price Low to High', value: 'price' }
         ];
     }
 

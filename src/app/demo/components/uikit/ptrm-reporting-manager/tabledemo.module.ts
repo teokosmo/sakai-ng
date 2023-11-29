@@ -22,6 +22,9 @@ import { DialogModule } from 'primeng/dialog';
 import { TabViewModule } from 'primeng/tabview';
 import { ChartsDemoRoutingModule } from '../charts/chartsdemo-routing.module';
 import { ChartModule } from 'primeng/chart';
+import { DataViewModule } from 'primeng/dataview';
+import { PickListModule } from 'primeng/picklist';
+import { OrderListModule } from 'primeng/orderlist';
 
 @NgModule({
 	imports: [
@@ -46,7 +49,10 @@ import { ChartModule } from 'primeng/chart';
         InputNumberModule,
         DialogModule,
         ChartsDemoRoutingModule,
-		ChartModule
+		ChartModule,
+        DataViewModule,
+        PickListModule,
+        OrderListModule
 	],
 	declarations: [TableDemoComponent]
 })
