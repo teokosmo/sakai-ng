@@ -19,11 +19,15 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DialogModule } from 'primeng/dialog';
+import { TabViewModule } from 'primeng/tabview';
+import { ChartsDemoRoutingModule } from '../charts/chartsdemo-routing.module';
+import { ChartModule } from 'primeng/chart';
 
 @NgModule({
 	imports: [
 		CommonModule,
 		TableDemoRoutingModule,
+        TabViewModule,
 		FormsModule,
 		TableModule,
 		RatingModule,
@@ -40,7 +44,9 @@ import { DialogModule } from 'primeng/dialog';
         InputTextareaModule,
         RadioButtonModule,
         InputNumberModule,
-        DialogModule
+        DialogModule,
+        ChartsDemoRoutingModule,
+		ChartModule
 	],
 	declarations: [TableDemoComponent]
 })
